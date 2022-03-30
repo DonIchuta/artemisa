@@ -1,0 +1,346 @@
+﻿/* ###########################################################################
+######
+######
+######
+######  CUSTOM FORMS BLACK
+######
+######
+######
+###########################################################################*/
+
+/* ###########################################################################
+######
+######  GENERAL
+######
+###########################################################################*/
+
+textarea:focus, input:focus{outline: 0;}
+
+.formulario{
+	font: normal 1em Arial, Helvetica, sans-serif;
+	color: #666;
+	background-color:#ffffff;
+	border: 1px solid #ccc;
+	padding:15px 12px;
+	margin-bottom:20px;
+	width:100%;
+	margin-bottom:8px;
+    outline: none;
+	
+	display: inline-block;
+	    
+	-webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    
+}
+
+.formulario.big{padding:20px 15px; font-size:1.25em;}
+.formulario.nomargin{margin:0px;}
+.formulario.minmargin{margin:10px;}
+
+.formulario:focus {border-color: #7c7c7c; outline: 0;}
+
+.formulario::-moz-placeholder {color: #666; opacity: 1;}
+.formulario:-ms-input-placeholder {color: #666;}
+.formulario::-webkit-input-placeholder {color: #666;}
+
+.formulario.ok{border:1px solid #ccc; background-position: 100% 50%;}
+.formulario.ko{border:1px solid #d9534f; background:#fff; background-position: 100% 50%; color:#d9534f;}
+
+.formulario.ko::-moz-placeholder {color: #d9534f;}
+.formulario.ko:-ms-input-placeholder {color: #d9534f;}
+.formulario.ko::-webkit-input-placeholder {color: #d9534f;}
+
+.formulario.obligatorio{border:1px solid #dbdbdb; background-position: 100% 50%;}
+.formulario:disabled{color: #aaa; background-color:#f0f0f0; border:1px solid #cccccc; cursor: not-allowed; text-shadow: -1px -1px 0 #f0f0f0, 1px -1px 0 #f0f0f0, -1px 1px 0 #f0f0f0, 1px 1px 0 #f0f0f0;}
+
+label.formulario {
+	display: inline-block;
+	position: relative;
+	width:160px;
+	/*width:18%;*/
+	border:0;
+	padding:12px 5px;
+	color:#333;
+	background:none;
+	-webkit-box-shadow: none;
+    box-shadow: none; margin-bottom:2px; vertical-align:middle; vertical-align:top;
+} 
+
+.formulario.l-size{max-width:300px; width:250px;}/*med */
+.formulario.s-size{max-width:200px; width:170px;}/*min */
+.formulario.auto{width:70%;}
+
+label.formulario img{padding:0px}
+
+.select_min{min-width:40px; width:auto; margin:0 15px 15px 0;display:inline-block;}
+
+/*Asterisco obligatorio*/
+.color-asterisco{fill:#ff0043;}
+
+input.obligatorio[type=text], input.obligatorio[type=password], textarea.obligatorio, select.obligatorio{background:white url('../images/asterisco.svg') no-repeat; background-size: 8px 8px; background-position: right 5px top 5px !important;}
+
+
+/*formulario mini*/
+.formulario.cantidad{margin:0px; text-align:center; width:45px;	min-width:45px;}
+.formulario.cantidad.s-size{padding:12px 5px; width:35px; min-width:35px;}
+.formulario.cantidad.full{width:100%; min-width:100%;}
+
+
+
+@media (max-width: 670px){
+	label.formulario{width:100%;}
+	.formulario{ margin-bottom:15px}
+}
+
+@media (max-width: 560px){
+	.formulario.auto{width:100%;}
+	.select_min{width:100%;}
+}
+
+
+/* ###########################################################################
+######
+######  TEXT AREA 
+######
+###########################################################################*/
+
+textarea{overflow:auto; resize: none;}
+.textarea{line-height:130%;}
+input[type=textarea].formulario {background-position: right bottom;}
+
+
+/* ###########################################################################
+######
+######  FILE
+######
+###########################################################################*/
+
+/*input[type=select-one].formulario {*/
+input[type=file].formulario {border:0px solid #ccc;}
+
+/* ###########################################################################
+#####
+#####
+#####    RADIO BUTTON
+#####
+#####
+###########################################################################*/
+
+input[type=radio].formulario {clear:both; width:auto; border:0px; margin:0px; padding:0px;}
+
+/* ###########################################################################
+#####
+#####
+#####    CHECK BOX
+#####
+#####
+###########################################################################*/
+
+input[type=checkbox].chkbox + label  { 
+	margin-right:5px;
+	width: 16px; 
+	height: 16px; 
+	cursor: pointer;
+	width:auto;
+	float:left;
+	padding:0;
+	background:transparent;
+	border:0px;
+	border-bottom:1px solid #d7d7d7;
+}
+
+input[type=checkbox] {
+  width: 13px;
+  height: 16px;
+  padding: 0;
+  margin:0;
+  vertical-align: bottom;
+  position: relative;
+  top: -1px;
+  *overflow: hidden;
+  vertical-align:middle;
+  margin:8px 0;
+}
+
+.checkbox input[type=checkbox] {margin: 0px;} 
+
+/* ###########################################################################
+#####
+#####
+#####  BOTONES
+#####
+#####
+###########################################################################*/
+
+input[type=button].formulario, input[type=submit].formulario {
+    background-color: #41b849;/*colordest*/
+	color: #ffffff;
+	width:auto;
+	text-decoration: none;
+	border:none;
+	text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    text-indent:2px;
+	padding: 17px 45px;
+	margin-bottom:0;
+	
+	-webkit-appearance: button;/*safari*/
+}
+
+input[type=button].formulario.full, input[type=submit].formulario.full {width:100%}
+
+input[type=button].formulario:disabled, input[type=submit].formulario:disabled{
+	color: #989898;
+	background-color:#f7f7f7;
+	border:1px solid #f2f2f2;
+	cursor: not-allowed;
+	text-shadow: -1px -1px 0 #f3f3f3, 1px -1px 0 #f3f3f3, -1px 1px 0 #f3f3f3, 1px 1px 0 #f3f3f3;
+}
+
+@media (max-width: 560px){
+	input[type=button].formulario, input[type=submit].formulario {width:100%}
+	input[type=button].formulario.auto, input[type=submit].formulario.auto {width:auto}
+}
+
+
+/* ###########################################################################
+######
+######  SELECT STYLE CON IMG TRIÁNGULO
+######
+###########################################################################*/
+
+.select-estilo select.formulario {background: transparent; background-image: none; -webkit-appearance: none;padding:12px 12px;}
+.select-estilo select.formulario {overflow: hidden; background: #ffffff url(../images/icon-select.png) no-repeat right 15px bottom 50%; display:block; position:relative;}
+.select-estilo select.formulario.obligatorio{border:1px solid #ff0043; background: #ffffff url(../images/icon-select.png) no-repeat right 15px bottom 50% !important;}
+.select-estilo select.formulario.ko{border:1px solid #d9534f; background: #ffffff url(../images/icon-select.png) no-repeat right 15px bottom 50% !important;}
+
+.select-estilo select.formulario:disabled{color: #aaa; background-color:#f0f0f0; border:1px solid #cccccc; cursor: not-allowed; text-shadow: -1px -1px 0 #f0f0f0, 1px -1px 0 #f0f0f0, -1px 1px 0 #f0f0f0, 1px 1px 0 #f0f0f0;}
+.dark .select-estilo select.formulario:disabled{color: #515151; background-color:#262626; border:1px solid #3c3c3c; cursor: not-allowed; text-shadow: -1px -1px 0 #262626, 1px -1px 0 #262626, -1px 1px 0 #262626, 1px 1px 0 #262626;}
+
+.dark .select-estilo select.formulario{background: #262626 url(../images/icon-select-dark.png) no-repeat right 15px bottom 50% !important; border-color: #3c3c3c;}
+
+/* ###########################################################################
+#####
+#####
+#####  INPUT CON ESTILOS PARA: CHECKBOX - RADIO - SWITCH
+#####
+#####
+###########################################################################*/
+
+/* Radio Box antes */
+.rdiobox {font-weight: normal; position: relative; display: inline-block; line-height: inherit; cursor:pointer; margin-right:10px; margin-bottom:15px;}
+.rdiobox span{ display:block; overflow: hidden; padding-left:17px; color:#333}
+.rdiobox span:before, .rdiobox span:after {line-height: 22px; position: absolute;}
+.rdiobox span:before {content: ''; width: 22px; height: 22px; background-color: #ffffff; border: 1px solid #c1c1c1; border-radius: 50px; top: 2px; left: 0;}
+.rdiobox span:after {content: ''; width: 8px; height: 8px; background-color: #c80000;/*color default rojo*/ border-radius: 50px; top: 9px; left: 7px; display: none;}
+.rdiobox input[type=radio] {opacity: 0; margin: 5px 10px 0px 0px;float:left;}
+.rdiobox input[type=radio]:checked + span:before {border-color: #c1c1c1;}
+.rdiobox input[type=radio]:checked + span:after {display: block;}
+.rdiobox input[type=radio][disabled] + span:before{background-color: #f2f4f4;}
+
+/* Radio */
+.container-radio {display: block; position: relative;  padding-left: 30px; margin-bottom: 15px; cursor: pointer; font-size: 1em; -webkit-user-select: none; -moz-user-select: none;  -ms-user-select: none; user-select: none;}
+.container-radio input {position: absolute; opacity: 0; cursor: pointer;}
+.checkmark-radio {position: absolute; top: 0; left: 0; height: 22px; width: 22px; background-color: #fff; border:1px solid #c1c1c1; border-radius: 50%;}
+.container-radio:hover input ~ .checkmark-radio {background-color: #f2f4f4;}
+.container-radio  ~ .checkmark-radio {background-color: #f2f4f4;}
+.container-radio input:disabled ~ .checkmark-radio {background-color: #f2f4f4;}
+.container-radio input:checked ~ .checkmark-radio {background-color: #fff; }
+.checkmark-radio:after {content: ""; position: absolute; display: none;}
+.container-radio input:checked ~ .checkmark-radio:after {display: block;}
+.container-radio .checkmark-radio:after {left: 6px; top: 6px; width: 8px; height: 8px; border-radius: 50%; background: #c80000;/*color default rojo*/}
+
+.container-radio.mini{font-size:0.875em; padding-left:25px; line-height:130%}
+.container-radio.mini > .checkmark-radio{height: 18px; width: 18px;}
+.container-radio.mini .checkmark-radio:after{left:5px; top:5px; width: 6px; height: 6px;}
+
+/* Checkbox */
+.container-check {display: block; position: relative; padding-left: 30px; margin-bottom: 15px; cursor: pointer; font-size: 1em; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;}
+.container-check input {position: absolute; opacity: 0; cursor: pointer; height: 0; width: 0;}
+.checkmark-check {position: absolute; top: 0; left: 0; height: 22px; width: 22px; background-color: #f2f4f4; border:1px solid #c1c1c1; border-radius:4px;}
+.container-check:hover input ~ .checkmark-check{background-color: #f2f4f4;}
+.container-check input:disabled ~ .checkmark-check {background-color: #f2f4f4;}
+.container-check input:checked ~ .checkmark-check {background-color: #fff;  }
+.checkmark-check:after {content: ""; position: absolute; display: none;}
+.container-check input:checked ~ .checkmark-check:after {display: block;}
+.container-check .checkmark-check:after {left: 7px; top: 3px; width: 6px; height: 12px; border: solid #c80000;/*color default rojo*/ border-width: 0 2px 2px 0; -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg);}
+
+.container-check.mini{font-size:0.875em; padding-left:25px; line-height:130%}
+.container-check.mini > .checkmark-check{height: 18px; width: 18px;}
+.container-check.mini .checkmark-check:after{left:5px; top:2px; width: 5px; height: 10px;}
+
+/* Switch */
+.input-control-switch {margin-bottom:15px; position:relative;}
+.input-control-switch p{padding-right:5px;}
+
+input[switch]{display:none}
+input[switch]+label{font-size:1em; line-height:1; width:56px; height:24px; background-color:#aab2b9; background-image:none; border-radius:2rem; padding:.16667rem; cursor:pointer; display:inline-block; text-align:center; position:relative; font-weight:500; -webkit-transition:all .1s ease-in-out; transition:all .1s ease-in-out;}
+input[switch]+label:before{color:#343a40; content:attr(data-off-label); display:block; font-family:inherit; font-weight:500; font-size:12px; line-height:21px; position:absolute; right:1px; margin:3px; top:-2px; text-align:center; min-width:1.66667rem; overflow:hidden; -webkit-transition:all .1s ease-in-out; transition:all .1s ease-in-out}
+input[switch]+label:after{content:''; position:absolute; left:3px; background-color:#eff2f7; -webkit-box-shadow:none; box-shadow:none; border-radius:2rem; height:20px; width:20px; top:2px; -webkit-transition:all .1s ease-in-out; transition:all .1s ease-in-out}
+input[switch]:checked+label{background-color:#222}
+input[switch]:checked+label{background-color:#222}
+input[switch]:checked+label:before{color:#fff; content:attr(data-on-label); right:auto; left:3px}
+input[switch]:checked+label:after{left:33px; background-color:#eff2f7}
+
+input[switch=verderojo]+label{background-color:#e5352f}
+input[switch=verderojo]+label:before,input[switch=bool]:checked+label:before,input[switch=default]:checked+label:before{color:#fff}
+input[switch=verderojo]:checked+label{background-color:#41b849}
+
+input[switch=default]:checked+label{background-color:#5b5c60}
+input[switch=verde]:checked+label{background-color:#41b849}
+input[switch=amarillo]:checked+label{background-color:#ffae11}
+input[switch=rojo]:checked+label{background-color:#e5352f}
+input[switch=gris]:checked+label{background-color:#6b7275}
+
+.square-switch{margin-right:7px}
+.square-switch input[switch]+label,.square-switch input[switch]+label:after{border-radius:4px}
+
+
+input[switch]+label.l-size{width:66px; height:24px;}
+input[switch]:checked+label.l-size:after{left:43px;}
+
+
+/* ###########################################################################
+#####
+#####
+#####  INPUT CON BOTÓN PEGADO
+#####
+#####
+###########################################################################*/
+
+/*newsletter o buscador*/
+.input-boton-pegados{display:-ms-flexbox;display:flex; margin:8px auto 0px auto; text-align:center;}
+.input-boton-pegados input{width:300px;display:inline-block;border:1px solid #d7d7d7; height:45px; padding:10px 15px; font-size:0.9375em}
+.botonpegado{display:inline-block;vertical-align:middle;margin:0px;padding:1.052em 2em;-webkit-appearance:none;border:1px solid transparent;transition:background-color .25s ease-out,color .25s ease-out;line-height:1;text-align:center;cursor:pointer;background-color:#323232;color:#fff}
+.botonpegado{outline:0}
+.botonpegado:focus,.botonpegado:hover{background-color:#c80000;/*colordest*/ color:#fff}
+
+@media (max-width: 991px) {
+	.input-boton-pegados{display:table; margin:10px auto;}
+	.botonpegado{vertical-align:top; height:45px}
+	.input-boton-pegados input{width:60%;}
+}
+
+
+/* ###########################################################################
+#####
+#####
+#####  CONTROL-GROUP: CAJA ICONO DERECHA IZQUIERDA EN INPUT
+#####
+#####
+###########################################################################*/
+
+.input-group {position: relative; display: table; border-collapse: separate; margin-bottom:8px;}
+.input-group.full {width:100%;}
+
+.input-group .form-control {position: relative; z-index: 2; float: left; width: 100%; margin-bottom: 0;}
+.input-group .form-control:focus {z-index: 3;}
+
+.input-group-addico, .input-group-btn, .input-group .form-control {display: table-cell; vertical-align:middle;}
+.input-group-addico {padding: 6px 12px; font-size: 0.9375em; font-weight: 400; line-height: 1; color: #555555; text-align: center; background-color: #eeeeee; border: 1px solid #ccc; width:45px;}
+
+.input-group-addico ~ .formulario {margin-left:-1px;}/*empuja el formulario a la izquerda 1px*/
+.formulario ~ .input-group-addico {border-left:0px;}/*eliminia raya izquierda de addico*/

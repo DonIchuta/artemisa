@@ -1,0 +1,219 @@
+/*#----------------------------------------------------------------------------------------------------
+#								   WEB CORE
+#------------------------------------------------------------------------------------------------------
+##############################################################
+#####    Desktop tablet mobil  ( show hide )
+##############################################################*/
+.escritorio{visibility:hidden; display:none}
+.tableta{visibility:hidden; display:none;}
+.telefono{visibility:hidden; display:none}
+/*ESCRITORIO Y MAS*/
+@media (min-width: 992px){
+	.escritorio{visibility:visible; display:inherit;}
+}
+/*TABLET*/
+@media (min-width: 768px) and (max-width:991px) {
+	.tableta{visibility:visible; display:inherit;}
+}
+/*MOVIL*/
+@media (min-width: 0px) and (max-width:767px) {
+	.telefono{visibility:visible; display:inherit;}
+}
+
+/*##############################################################
+#####    BOTON CERRAR
+##############################################################*/
+
+.close {
+  float: right;
+  font-size: 1em;
+  font-weight: bold;
+  line-height: 1em;
+  color: #000000;
+  text-shadow: 0 1px 0 #ffffff;
+  opacity: 0.2;
+  filter: alpha(opacity=20);
+}
+.close:hover {
+  color: #000000;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+}
+
+button.close {
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  -webkit-appearance: none;
+}
+
+
+/*##############################################################
+#####    MENSAJES ADMIN
+##############################################################*/
+
+/*posición msg admin*/
+.posicion-mensajes{
+	position:fixed; z-index:100000; top:15px; right:20px; width:50%; right: calc(50% - 700px + 20px); /*la mitad del tamaño máximo de pantalla definido en flexible*/
+	max-width:520px; height:auto; max-height:85%; font: normal 14px 'Open Sans', Arial, Helvetica, sans-serif; line-height:150%
+}
+@media all and (max-width: 1400px){.posicion-mensajes {right: 20px;}}
+@media all and (max-width: 1200px){.posicion-mensajes {right: 20px;}}
+@media (max-width: 480px) {.posicion-mensajes {right: 10px;max-width:400px; font-weight:normal}}
+@media (max-width: 768px) {.posicion-mensajes{width:90%;}}
+
+/*msg admin*/
+.mensajes-admin {position:absolute; top:.5em; right:.7em; z-index:100000; max-width:520px; height:auto; max-height:85%; font: normal 1em Arial, Helvetica, sans-serif; font-weight:400; line-height:150%}
+.alert-box{padding:15px 15px 15px 45px;  display:flex; align-items: center; justify-content: center; color:white; margin-bottom:15px; margin-left:15px; min-width:320px}
+
+.cargando {background-color:#6b7275; background:#6b7275 url("../images/mensaje-cargando.svg") center left 10px no-repeat; background-size: 26px 26px; padding:15px 15px 15px 45px;  display:flex; align-items: center; justify-content: left; color:white; margin-bottom:15px; margin-left:15px; min-width:320px;}
+
+.mensaje {background-color:#41b849; background:#41b849 url("../images/mensaje-correcto.svg") center left 10px no-repeat; background-size: 26px 26px; padding:15px 15px 15px 45px;  display:flex; align-items: center; justify-content: left; color:white; margin-bottom:15px; margin-left:15px; min-width:320px;}
+
+.aviso {background-color:#ffae11; background:#ffae11 url("../images/mensaje-aviso.svg") center left 10px no-repeat; background-size: 26px 26px; padding:15px 15px 15px 45px;  display:flex; align-items: center; justify-content: left; color:white; margin-bottom:15px; margin-left:15px; min-width:320px;}
+
+.error {background-color:#e5352f; background:#e5352f url("../images/mensaje-error.svg") center left 10px no-repeat; background-size: 26px 26px; padding:15px 15px 15px 45px;  display:flex; align-items: center; justify-content: left; color:white; margin-bottom:15px; margin-left:15px; min-width:320px;}
+
+.informacion {background-color:#898989; background:#898989 url("../images/mensaje-error.svg") center left 10px no-repeat; background-size: 26px 26px; padding:15px 15px 15px 45px;  display:flex; align-items: center; justify-content: left; color:white; margin-bottom:15px; margin-left:15px; min-width:320px;}
+
+.mensajes-admin a, .posicion-mensajes a {color:inherit !important; text-decoration:none; cursor:pointer; border-bottom:1px solid white;}
+.mensajes-admin a:hover, .mensaje-alerta a:focus, .posicion-mensajes a:hover, .posicion-mensajes a:focus{border-bottom:0px solid white;}
+
+.btn-cerrar {margin-left: 15px; color: white; font-weight: bold; font-size: 22px; line-height: 15px; cursor: pointer; transition: 0.3s; margin-left: auto; order: 1; align-self: flex-start; padding:6px; padding-left:8px; background-color:rgba(255,255,255,0.00); border-radius:3px}
+
+@media (max-width: 991px) {
+	.mensajes-admin {max-width:95%;}
+	.cargando, .mensaje, .error, .aviso{width:auto; min-width:250px}
+}
+
+
+
+/*Mensajes formulario*/
+.mensaje.form, .aviso.form, .error.form, .informacion.form {text-shadow: none; color: white;background-image:none; padding: 6px 6px; font-size:0.6875em; line-height:0.6875em;border-radius: 2px; display:block; min-width:auto}
+.mensaje.form:before, .aviso.form:before, .error.form:before, .informacion.form:before{content:"";position: absolute; width: 0; height: 0; border-right: 4px solid transparent; border-left: 4px solid transparent; margin: -12px 0 0 0px;}
+.mensaje.form:before {border-bottom: 8px solid #41b849;}
+.aviso.form:before {border-bottom: 8px solid #ffae11;}
+.error.form:before {border-bottom: 8px solid #e5352f;}
+.informacion.form:before {border-bottom: 8px solid #898989;}
+
+
+
+
+/*##############################################################
+#####   Hacks desactivar webkit // formularios y botones en safari 
+##############################################################*/
+input[type='date'], input[type='time'] { -webkit-appearance: none; }
+select { -webkit-appearance: none;   -moz-appearance: none; appearance: menulist; line-height:26px; }
+
+/*##############################################################
+#####    DEBUG
+##############################################################*/
+#debugger { position: fixed;  left: 10px;  bottom: 0px;  background:#000\9; background-color:rgba(0, 0, 0, 0.8);  font-size: 13px;  color: #fff;  padding: 5px 10px;  z-index:30000; }
+
+.contenido_debug {min-width: 800px; max-width: 1024px; max-height: 600px; padding: 3px; overflow: auto; border-bottom: 1px solid lightgray; color: goldenrod; display:none; }
+.contenido_debug > a, .contenido_debug > a:hover, .contenido_debug > a:visited {font-weight: bold;text-decoration: underline;color:orange; }
+
+.boton_debug {top:6px; right:6px;  text-transform: uppercase; font-size:0.7857em;  font-weight: bold; line-height:0.7857em; padding:4px 5px;border:1px solid #ccc; background-color: black; color:#ccc; width:auto; display:inline-block; margin-right:5px; font-family:Arial, Helvetica, sans-serif; }
+.boton_debug :a { color: grey; }
+.boton_debug :hover { color: grey; }
+
+
+/*##############################################################
+#####    404
+##############################################################*/
+.caja_404 {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    border: 1px solid #dbdbdb;
+    background: #fff;
+    padding: 40px 15px;
+    position: relative;
+}
+.txt404 {
+    font-size: 7em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    line-height: 1em;
+    color: #ad0000;
+}
+.txt404_msg {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.5em;
+    color: #333;
+    line-height: 1.2em;
+}
+
+/*##############################################################
+#####    COOKIES
+##############################################################*/
+.cookieNotice{
+	width: 100%;
+	position: fixed;
+	bottom:0px;
+	border-top:1px solid #666;
+	background: #000;
+	opacity: 0.8; filter: alpha(opacity=80);
+	z-index: 999999;
+
+	line-height: 1.3em;
+	font-family: arial;
+	left: 0px;
+	text-align:center;
+}
+
+.cookieNotice p {font-size: 12px; margin:0px; padding:0px; color:#fff;}
+.cookieNotice p a {color:#fff; text-decoration:underline}
+.cookieNotice p a:hover {color:#fff;}
+
+.cookieNoticeContent{position:relative; margin:auto; padding:15px 10px; max-width:100%; display:block;}
+
+
+/*##############################################################
+#####    NO select (evita que los textos se puedan seleccionar.)
+##############################################################*/
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+
+/*##############################################################
+#####    SIMPLE LIST
+##############################################################*/
+ul.simplelist{margin:0px 0px;}
+ul.simplelist.nomargin{ margin-bottom:0px;}
+ul.simplelist li {margin:0 20px 0 25px; padding:7px 0 7px 0px;}
+ul.simplelist li.enlinea{display:inline-block; text-align:center; background:#ededed; padding:10px; margin:5px 0;}
+ul.simplelist li a{text-decoration:underline;}
+
+ul.simplelist.verde{color:#385d2d; margin:10px 0; line-height:1.1875em;}
+ul.simplelist.verde span{font-size: 0.875em; color:#999999;}
+
+ul.simplelist li.num {list-style-type: decimal}/*números*/
+ul.simplelist li.nu0 {list-style-type: decimal-leading-zero}/*números con 0 antes*/
+ul.simplelist li.min {list-style-type: lower-latin}/*minúsculas*/
+ul.simplelist li.may {list-style-type: upper-latin}/*mayúsculas*/
+ul.simplelist li.cua {list-style-type: square;}/*cuadrado*/
+ul.simplelist li.pun {list-style-type: disc;}/*círculo relleno*/
+ul.simplelist li.cir {list-style-type: circle;}/*círculo vacio*/
+
+.notapie { font-size:0.8em; color: grey }
+
+
+/*##############################################################
+#####    SIMPLE TABLA
+##############################################################*/
+table.simpletabla { width: 100%; border-collapse: collapse; padding: 8px;  }
+/*table.simpletabla {border: 1px solid #C0C0C0}*/
+table.simpletabla th { border: 1px solid #000;background-color:#ababab ; padding: 5px; font-size: 0.9em }
+table.simpletabla tr { border: 1px solid #000; padding: 5px; font-size: 0.9em }
+table.simpletabla td {border: 1px solid #000; padding: 3px;}

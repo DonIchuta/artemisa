@@ -1,0 +1,154 @@
+/*
+ * Descripción: 
+ * Copyright (c) 2019
+ *
+ */
+
+
+
+
+
+/*=========================
+		H1-H2-H3
+=========================*/
+
+
+.titulo {       /*40px*/ font-size: 2.5em; font-family: 'Fjalla One', sans-serif;   font-weight: bold; color: #4b4b4b; line-height: 1.3em; }
+.subtitulo-big {/*26px*/ font-size: 1.625em; font-family: 'Fjalla One', sans-serif; color: #8f8f8f; line-height: 1.2em;  }
+.subtitulo {    /*20px*/ font-size: 1.25em; font-family: 'Fjalla One', sans-serif; color: #8f8f8f; line-height: 1em }
+.tit-parrafo {  /*24px*/ font-size: 1.5em;  font-weight: bold; line-height: 1em}
+.parrafo {      /*16px*/ font-size: 1em; line-height: 1em }
+.pieparrafo {   /*14px*/ font-size: 0.875em; line-height: 1em }
+
+@media (max-width: 991px){ 
+	.titulo { font-size: 2em;  line-height: 1.2em; }
+	.subtitulo-big { font-size: 1.4em; line-height: 1.3em; }
+	.subtitulo {  font-size: 1.1em;  }
+	.tit-parrafo { font-size: 1em;  line-height: 0.9em }
+	.parrafo { font-size: 0.9em;  line-height: 1.4em }
+	.pieparrafo { font-size: 0.8em;  line-height: 1.4em }
+}
+@media (max-width: 768px){ 
+	.titulo { font-size: 1.8em;  line-height: 1.3em;  }
+	.subtitulo-big { font-size: 1.3em; line-height: 1.3em; }
+	.subtitulo {  font-size: 1em;  }
+	.tit-parrafo { font-size: 0.9em;  line-height: 0.9em }
+	.parrafo { font-size: 0.8em;  line-height: 1.4em }
+	.pieparrafo { font-size: 0.7em;  line-height: 1.4em }
+}
+
+
+.resaltado { color: #f71953; }
+
+
+/*=========================
+		 TEXTOS
+=========================*/
+
+ /*Zona menu */
+.menu-desktop {font-family: arial; font-size: 1.2em; font-weight: bold; }
+.menu-desktop.color { color: #4b4b4b; }
+
+.menu-movil {font-family: 'Fjalla One', sans-serif }
+.menu-movil.color { color: #4b4b4b; }
+.menu-opcionm.resaltado a{color: #fff}
+
+/*404*/
+.txt404 {font-size: 7em; font-family: Arial, Helvetica, sans-serif; font-weight: 400; line-height:1em; color:#ad0000;}
+.txt404_msg, .txtbig{font-family: Arial, Helvetica, sans-serif; font-size:2.5em; color:#333;	line-height:1.2em;}
+
+.notfound-404 { /*font-family: 'Fjalla One', 'Montserrat', sans-serif;*/
+	font-family: 'Arial Black', sans-serif;
+	font-size: 250px;
+	font-weight: bolder;
+	line-height: 230px;
+	color: #262626;
+	text-transform: uppercase;
+	letter-spacing: -63px;
+	margin-top: -20px
+	}
+
+.notfound-404 {  margin-left: -52px; }
+.notfound-404 > span { text-shadow: -8px 0px 0px #fff;  }
+/*.notfound-404 > h2*/
+
+.blockquote {  background: #f9f9f9; border-left: 10px solid #ccc; margin: 1.5em 10px;  padding: 0.5em 10px; quotes: "\201C""\201D""\2018""\2019";}
+.blockquote:before { color: #ccc; content: open-quote; font-size: 4em; line-height: 0.1em; margin-right: 0.25em; vertical-align: -0.4em; }
+
+.capitular:first-letter { display: block; margin: 5px 0px 0 5px; float: left; color: #0c54a0; font-size: 5.4em; font-family: Georgia, Times New Roman, serif; }
+
+.txtmin{ font: normal 0.857em Arial, Helvetica, sans-serif; color: #585f69; line-height: 1.5em; text-decoration: none; }
+.txtmin a{color:#585f69; text-decoration:underline}
+.txtmin a:hover{color:#585f69; text-decoration:none;}
+
+.texto{font-size:1.0714em;}
+
+.textshadow-black{text-shadow: 1px 1px 10px rgba(0,0,0,0.4);}
+.textshadow-white{text-shadow: 1px 1px 6px rgba(255,255,255,0.5);}
+
+
+/*=========================
+       MEDIA QUERIES
+=========================*/
+
+
+@media (max-width: 768px){
+	.txt404 {font-size: 4.375em;}
+	.txt404_msg, .txtbig {font-size: 1.875em;}
+	.notfound-404 { font-size: 200px; line-height: 200px; letter-spacing: -53px; 	}
+}
+
+
+
+/*
+ * Descripción: 
+ * Copyright (c) 2020
+ * Versión: 7.0
+ * Autor: GRUPO5.COM
+*/
+
+.title {font-size:2.25em; line-height:120%; color:#000; position:relative; margin-bottom:30px; font-weight:bold; font-family:'Barlow Semi Condensed', sans-serif;}
+.title a {text-decoration:none; color:#000;}
+.title a:hover{text-decoration:none; color:#000;}
+
+.title.nomargin{margin:0px;}
+.title.s-marginbt{ margin-bottom:10px;}/*minmargin*/
+.title.xs-marginbt{ margin-bottom:5px;}/*peqmargin*/
+
+.title.l-size{font-size:1.75em;}/*med*/
+.title.s-size{font-size:1.375em;}/*min*/
+.title.xs-size{font-size:1.25em; font-weight:600}/*peq*/
+
+.title.minheight{display:block; min-height:50px}
+
+.subtitle{font-size:1.125em; color:#4b4b4b; font-weight:bold}
+
+.txtbig{font-size:1.875em; font-weight:600; font-style:italic; line-height:120%; color:#333333;}
+.txtbig.negrita{font-weight:700; font-style:normal;}
+
+.txtmin{font: normal 0.875em 'Open Sans', Arial, Helvetica, sans-serif;/*0.886em*/ color: #2e2e2e; line-height: 140%; text-decoration: none; margin:5px 0;}
+.txtmin.carrito, .txtmin.s-size{font-size:0.8125em; color:#535353;}
+
+.titulo{font: normal 1.231em Arial, Helvetica, sans-serif; /*18px*/ line-height:1.231em; color:#000; margin-bottom:5px}
+
+.titaba {font-size:1.25em; font-family: 'Open Sans', sans-serif; line-height:110%; color:#fff; position:relative; margin:20px 0;}
+.titaba a {text-decoration:none; color:#fff;}
+.titaba a:hover{text-decoration:none; color:#fff;}
+
+
+.abajo{font-size: 0.9375em; color: #666666; line-height: 1.6em; text-decoration: none; padding-top:7px;}
+.abajo a, .abajo a:focus{color: #666666; text-decoration: none;}
+.abajo a:hover, .abajo a:focus{color: #ffffff; text-decoration: none;}
+
+.txt404 {font-size: 7em; font-family: Arial, Helvetica, sans-serif; font-weight: 400; line-height:1em; color:#ad0000;}
+.txt404_msg{font-family: Arial, Helvetica, sans-serif; font-size:2.5em; color:#333; line-height:1.2em;}
+
+/*colores*/
+.colordest {color:#c80000 !important;}
+.negro {color:#000000 !important;}
+.blanco {color:#ffffff !important;}
+.rojo {color:#c80000 !important;}
+.verde {color:#31ae00 !important;}
+.gris {color:#666 !important;}
+.amarillo {color: #ffae11;}
+.azul {color: #3b7ddd;}
